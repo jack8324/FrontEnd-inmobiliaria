@@ -1,0 +1,71 @@
+<body class="d-flex h-100 text-center">
+  <div class="container-fluid">
+  <div  class="col-md-12">
+    <div  class="col-md-12" id="registroUsuario">
+      <strong>
+        <img src="https://cms-assets.tutsplus.com/uploads/users/343/posts/23811/preview_image/tutsplus-icon.png" width="30" height="20">
+        <label>Registro  Usuario</label>
+     </strong>
+    </div>
+<br />
+<form [formGroup]="fgValidador" (ngSubmit)="registarUsuario()" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+        <label class="form-label"><strong>Nombres</strong></label>
+        <input formControlName="nombres" type="text" class="form-control" id="nombres" required>
+        <div class="invalid-feedback">
+          Este campo es obligartorio
+       </div>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label"><strong>Apellidos</strong></label>
+        <input formControlName="apellidos"  type="text" class="form-control" id="apellidos" required>
+        <div class="invalid-feedback">
+          Este campo es obligartorio
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label"><strong>Email</strong></label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input formControlName="correo" type="email" class="form-control" id="correo" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Este campo es obligartorio
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label  class="form-label"><strong>Teléfono</strong></label>
+        <input formControlName="celular" type="text" class="form-control" id="celular" required>
+        <div class="invalid-feedback">
+          Este campo es obligartorio
+        </div>
+    </div>
+    <div class="col-md-2">
+        <label for="" class="form-label"></label>
+        <div class="invalid-feedback">
+          Este campo es obligartorio
+        </div>
+    </div>
+    <div class="col-md-12">
+      <label class="form-label"><strong>Dirección</strong></label>
+      <input formControlName="direccion" type="text" class="form-control" id="direccion" required>
+      <div class="invalid-feedback">
+        Este campo es obligartorio
+      </div>
+  </div>
+   <p>
+     <label>
+            <span>Acepta nuestros terminos y condiciones (*).</span>
+            <input class="checkbox" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck"></label>
+    </label>
+  </p>
+  <div class="col-md-12 " id="botones">
+    <button  [disabled]="!fgValidador.valid" class="btn btn-secondary fw-bold border-white" type="submit">Registrarme</button>
+  </div>
+</form>
+</div>
+  </div>
+  <script type="text/javascript"   src="js/formulario.js"></script>
+</body>
+

@@ -1,0 +1,37 @@
+body{
+  margin-top: 40px;
+  width: 60%;
+  margin-left: 220px;
+  background-color: #11334D;
+  align-content: center;
+  border-radius:5px 5px 5px 5px;
+-webkit-border-radius:5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px;
+-o-border-radius:5px 5px 5px 5px;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+margin-bottom: 50px;
+}
+
+
+#registroUsuario{
+  margin-top: 50px;
+}
+#registroUsuario label{
+  margin-left: 20px;
+  color: rgb(33, 174, 199);
+}
+label{
+  color: rgb(214, 213, 213);
+  font-weight: bold;
+
+}
+
+#botones{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+#botones button{
+  color: rgb(214, 213, 213);
+}
+

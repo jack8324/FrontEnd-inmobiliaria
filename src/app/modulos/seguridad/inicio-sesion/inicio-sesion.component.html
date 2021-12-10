@@ -1,0 +1,26 @@
+<body class="text-center">
+  <main class="form-signin">
+    <form [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
+      <h1 class="h3 mb-3 fw-normal">Inicio de Sesion</h1>
+      <div class="form-floating">
+        <input formControlName="usuario" type="email" class="form-control" id="email" placeholder="name@example.com">
+        <label for="floatingInput">Correo electrónico</label>
+      </div>
+      <div class="form-floating">
+        <input  formControlName="clave" type="password" class="form-control" id="password" placeholder="Password">
+        <label for="floatingInput">Contraseña</label>
+      </div>
+      <div class="checkbox mb-3">
+        <label>
+          <a href="#">Olvide mi clave..!!</a>
+        </label>
+      </div>
+        <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button [disabled]="!fgValidador.valid" class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+    </form>
+  </main>
+</body>

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-md text-dark ">
+  <div class="container-fluid">
+    <a routerLink="/inicio" class="navbar-brand" href="#"><img src="./assets/img/Hogar.png" style="width: 60px;margin-right: 20px;"/>Hogar Colombia</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li *ngIf="seInicioSesion" class="nav-item">
+          <a  routerLink="/inmueble/consultar-inmueble" class="nav-link active" aria-current="page" href="#">Inmuebles</a>
+        </li>
+          <li *ngIf="seInicioSesion" class="nav-item dropdown">
+            <a routerLink="/administracion/asesor" class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Asesores</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Crear</a></li>
+              <li><a class="dropdown-item" href="#">Consultar</a></li>
+            </ul>
+          </li>
+      </ul>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <div class="col-4 pt-1">
+          <a class="link-secondary"  *ngIf="seInicioSesion"  routerLink="/seguridad/cerrar-sesion" href="#">Cerrar Sesion</a>
+        </div>
+        <a *ngIf="!seInicioSesion" routerLink="/seguridad/inicio-sesion" class="btn btn-sm btn-outline-secondary" href="#">Inicio Sesion</a>
+      </div>
+    </div>
+  </div>
+</nav>
+   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+<!--<nav>
+    <div class="nav-wrapper">
+      <a routerLink="/inicio" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a routerLink="/administracion/asesor">Asesores</a></li>
+        <li><a routerLink="/administracion/clientes">Clientes</a></li>
+        <li><a routerLink="/administracion/inmueble">Inmueble</a></li>
+        <li><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
+        <li><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo"><li><a routerLink="/administracion/asesor">Asesores</a></li>
+    <li><a routerLink="/administracion/clientes">Clientes</a></li>
+    <li><a routerLink="/administracion/inmueble">Inmueble</a></li>
+    <li><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
+    <li><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
+  </ul>
+-->
