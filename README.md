@@ -1,1 +1,1 @@
-# FrontEnd-inmobiliaria. creación del frontend para el proyecto inmobiliaria Hogar COlombia
+# FrontEnd-inmobiliaria. creación del frontend para el proyecto inmobiliaria Hogar Colombia
