@@ -39,14 +39,9 @@ export class CrearInmuebleComponent implements OnInit {
     inmueble.estado = this.fgValidador.controls["estado"].value;
     inmueble.valorinmueble = parseInt(this.fgValidador.controls["valorinmueble"].value);
 
-    alert(inmueble.asesor)
-
-    alert(inmueble.direccion)
-
-    alert(inmueble.tipoinmueble)
 
    this.inmuebleService.crearRegistroInmuebles(inmueble).subscribe((datos:any)=>{;
-   alert("Se ha registrado Inmueble Exitosamente")
+   alert("Se ha registrado el nuevo Inmueble Exitosamente")
    this.router.navigate(["/inmueble/consultar-inmueble"]);
  }, (error :any)=>{
   alert("Datos Invalidos")}
