@@ -3,43 +3,49 @@
   <div  class="col-md-12">
     <div  class="col-md-12" id="registroUsuario">
       <strong>
-        <img src="https://cms-assets.tutsplus.com/uploads/users/343/posts/23811/preview_image/tutsplus-icon.png" width="30" height="20">
+        <img src="./assets/img/Hogar2.png" width="100" height="90">
         <label>Editar Registro  Inmueble</label>
      </strong>
     </div>
 <br />
 <form [formGroup]="fgValidador" (ngSubmit)="ActualizarInmueble()" class="row g-3 needs-validation" novalidate>
   <input formControlName="id" type="hidden" class="form-control" id="id" required>
-  <div class="col-md-6">
+  <div class="col-md-8">
         <label class="form-label"><strong>Asesor</strong></label>
         <input formControlName="asesor" type="text" class="form-control" id="asesor" required>
         <div class="invalid-feedback">
           Este campo es obligartorio
        </div>
     </div>
-    <div class="col-md-6">
+   <!-- <div class="col-md-6">
         <label class="form-label"><strong>Tipo Consulta</strong></label>
         <input formControlName="tipoconsulta"  type="text" class="form-control" id="tipoconsulta" required>
         <div class="invalid-feedback">
           Este campo es obligartorio
         </div>
     </div>
-    <div class="col-md-6">
-        <label class="form-label"><strong>Tipo Inmueble</strong></label>
-        <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input formControlName="tipoinmueble" type="text" class="form-control" id="tipoinmueble" aria-describedby="inputGroupPrepend" required>
-            <div class="invalid-feedback">
-              Este campo es obligartorio
-            </div>
-        </div>
-    </div>
+  -->
     <div class="col-md-4">
-        <label  class="form-label"><strong>Estado</strong></label>
-        <input formControlName="estado" type="text" class="form-control" id="estado" required>
-        <div class="invalid-feedback">
-          Este campo es obligartorio
-        </div>
+      <label for="country" class="form-label"><strong>Tipo Consulta</strong></label>
+      <select formControlName="tipoconsulta" class="form-select" id="tipoconsulta" required>
+        <option value="">Alquiler</option>
+        <option value="">Compra</option>
+      </select>
+      <div class="invalid-feedback">
+        Este campo es obligatorio.
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="country" class="form-label"><strong>Tipo Inmueble</strong></label>
+      <select formControlName="tipoinmueble" class="form-select" id="tipoinmueble" required>
+        <option value="">Casa</option>
+        <option value="">Apartamento</option>
+        <option value="">Local Comercial</option>
+      </select>
+      <div class="invalid-feedback">
+        Este campo es obligatorio.
+      </div>
     </div>
     <div class="col-md-4">
       <label  class="form-label"><strong>Valor Inmueble</strong></label>
@@ -48,19 +54,31 @@
         Este campo es obligartorio
       </div>
   </div>
-  <div class="col-md-4">
+    <!-- <div class="col-md-6">
+        <label class="form-label"><strong>Tipo Inmueble</strong></label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input formControlName="tipoinmueble" type="text" class="form-control" id="tipoinmueble" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Este campo es obligartorio
+            </div>
+        </div>
+    </div>-->
+
+    <div class="col-md-4">
+        <label  class="form-label"><strong>Estado</strong></label>
+        <input formControlName="estado" type="text" class="form-control" id="estado" required>
+        <div class="invalid-feedback">
+          Este campo es obligartorio
+        </div>
+    </div>
+  <div class="col-md-12">
     <label  class="form-label"><strong>Url Imagen</strong></label>
     <input formControlName="imagen" type="text" class="form-control" id="imagen" required>
     <div class="invalid-feedback">
       Este campo es obligartorio
     </div>
 </div>
-    <div class="col-md-2">
-        <label for="" class="form-label"></label>
-        <div class="invalid-feedback">
-          Este campo es obligartorio
-        </div>
-    </div>
     <div class="col-md-12">
       <label class="form-label"><strong>Dirección</strong></label>
       <input formControlName="direccion" type="text" class="form-control" id="direccion" required>
