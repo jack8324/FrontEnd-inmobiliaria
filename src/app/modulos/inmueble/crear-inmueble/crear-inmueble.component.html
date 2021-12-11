@@ -18,9 +18,10 @@
     </div>
     <div class="col-md-6">
       <label for="country" class="form-label"><strong>Tipo Consulta</strong></label>
-      <select formControlName="tipoconsulta" class="form-select" id="tipoconsulta" required>
-        <option value="">Alquiler</option>
-        <option value="">Compra</option>
+      <select formControlName="tipoconsulta" class="form-select" id="tipoconsulta"  (change)="changeTipoConsulta($event)">
+        <option value=""></option>
+        <option value="Alquiler">Alquiler</option>
+        <option value="Compra">Compra</option>
       </select>
       <div class="invalid-feedback">
         Este campo es obligatorio.
@@ -38,10 +39,11 @@
 
     <div class="col-md-6">
       <label for="country" class="form-label"><strong>Tipo Inmueble</strong></label>
-      <select formControlName="tipoinmueble" class="form-select" id="tipoinmueble" required>
-        <option value="">Casa</option>
-        <option value="">Apartamento</option>
-        <option value="">Local Comercial</option>
+      <select formControlName="tipoinmueble" class="form-select" id="tipoinmueble" (change)="changeTipoInmueble($event)" >
+        <option value=""></option>
+        <option value="Casa">Casa</option>
+        <option value="Apartamento">Apartamento</option>
+        <option value="Local Comercial">Local Comercial</option>
       </select>
       <div class="invalid-feedback">
         Este campo es obligatorio.
@@ -82,13 +84,20 @@
     </div>
 
 </div>
-
+<div class="col-md-12">
+  <label class="form-label"><strong>Dirección</strong></label>
+  <input formControlName="direccion" type="text" class="form-control" id="direccion" required>
+  <div class="invalid-feedback">
+    Este campo es obligartorio
+  </div>
+</div>
     <div class="col-md-2">
         <label for="" class="form-label"></label>
         <div class="invalid-feedback">
           Este campo es obligartorio
         </div>
     </div>
+
   <div class="col-md-12 " id="botones">
     <button  [disabled]="!fgValidador.valid" class="btn btn-secondary fw-bold border-white" type="submit">Registrarme</button>
   </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/validador-sesion.guard';
 import { CrearInmuebleComponent } from './crear-inmueble/crear-inmueble.component';
 import { CrudInmuebleComponent } from './crud-inmueble/crud-inmueble.component';
 import { EditarInmuebleComponent } from './editar-inmueble/editar-inmueble.component';
@@ -8,19 +9,23 @@ import { EliminarInmuebleComponent } from './eliminar-inmueble/eliminar-inmueble
 const routes: Routes = [
   {
     path: 'consultar-inmueble',
-    component: CrudInmuebleComponent
+    component: CrudInmuebleComponent,
+    canActivate :[ValidadorSesionGuard]
   },
   {
     path: 'editar-inmueble/:id',
-    component: EditarInmuebleComponent
+    component: EditarInmuebleComponent,
+    canActivate :[ValidadorSesionGuard]
   },
   {
     path: 'crear-inmueble',
-    component: CrearInmuebleComponent
+    component: CrearInmuebleComponent,
+    canActivate :[ValidadorSesionGuard]
   },
   {
     path: 'eliminar-inmueble/:id',
-    component:EliminarInmuebleComponent
+    component:EliminarInmuebleComponent,
+    canActivate :[ValidadorSesionGuard]
   }
 ];
 

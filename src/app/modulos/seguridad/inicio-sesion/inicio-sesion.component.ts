@@ -30,12 +30,12 @@ let claveCifrada = cryptoJS.MD5(clave).toString();
 this.servicioSeguridad.Identificar(usuario,claveCifrada).subscribe((datos:any)=>{
 //Hay que almacenar de alguna manera los datos de la sesion
 this.servicioSeguridad.AlmacenarSesion(datos);
-  alert("Datos correctos")
+ // alert("Datos correctos")
   this.router.navigate(["/inicio"]);
 }, (error :any)=>{
 
 
-  alert("Datos Invalidos")
+  alert("Datos Invalidos.Verifique por favor")
 })
   }
 }

@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
     InicioComponent,
     ErrorComponent,
 
+
   ],
   imports: [
     BrowserModule,
